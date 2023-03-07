@@ -70,7 +70,7 @@ key.classList.add('playing');
 });
 
 function removeTransitions(e){
-  console.log(e);
+  if(e.propertyName !== 'transitions')return; //skip if it's not a transition
 }
 const keys = document.querySelectorAll('.key');
 keys.forEach(key=> key.addEventListener('transitionend', removeTransitions));
