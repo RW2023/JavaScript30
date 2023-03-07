@@ -62,7 +62,9 @@
 window.addEventListener('keydown', function(e){
   const audio = document.querySelector(`audio[data-key= "${e.keyCode}"]`)
 console.log(audio);
+audio.currentTime = 0;
 if(!audio) return; //Stop function from running if no associated audio element
+audio.play();
 })
 </script>
 
