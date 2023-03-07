@@ -67,9 +67,10 @@ audio.currentTime = 0;
 if(!audio) return; //Stop function from running if no associated audio element
 audio.play();
 key.classList.add('playing');
-})
+});
 
 const keys = document.querySelectorAll('.key');
+keys.forEach(key=> key.addEventListener('transitioned', removeTransition));
 
 
 </script>
